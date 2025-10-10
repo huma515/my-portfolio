@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anaya.dev - Frontend Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body class="dark">
+    <div class="animated-bg"></div>
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 header-transparent border-b border-theme">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-theme">
+                <span class="text-purple-500">Huma</span>.dev
+            </div>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-theme hover:text-purple-500 transition-colors">Home</a>
+                <a href="#about" class="text-theme hover:text-purple-500 transition-colors">About</a>
+                <a href="#projects" class="text-theme hover:text-purple-500 transition-colors">Projects</a>
+                <a href="#skills" class="text-theme hover:text-purple-500 transition-colors">Skills</a>
+                <a href="#contact" class="text-theme hover:text-purple-500 transition-colors">Contact</a>
+            </div>
+
+            <button id="themeToggle"
+                class="p-2 rounded-full bg-purple-500 text-white hover:bg-purple-600 transition-colors">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="particles" id="particles"></div>
+        <div class="container mx-auto px-6 text-center z-10">
+            <div class="floating mb-8">
+                <div
+                    class="w-32 h-32 mx-auto bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center glow-purple">
+                    <i class="fas fa-code text-4xl text-white"></i>
+                </div>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 text-theme">
+                Hi, I'm Huma <span class="wave">👋</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl mb-4 text-purple-500 font-semibold">
+                Frontend Developer
+            </h2>
+            <p class="text-xl mb-8 text-secondary max-w-2xl mx-auto">
+                I create modern, responsive, and user-friendly websites with clean design and smooth functionality.
+            </p>
+
+            <div class="space-x-4">
+                <button
+                    class="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-full glow-purple transition-all"
+                    onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });">
+                    View My Work
+                </button>
+                <button
+                    class="border-2 border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-full transition-all"
+                    onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+                    Contact Me
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-card">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div
+                        class="w-80 h-80 mx-auto bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center glow-purple">
+                        <i class="fas fa-user text-6xl text-white"></i>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <h2 class="text-4xl font-bold mb-6 text-theme">About Me</h2>
+                    <p class="text-lg mb-6 text-secondary">
+                        I'm Huma Hashim, a dedicated Frontend Developer from Karachi with a passion for crafting
+                        responsive and visually appealing websites. I focus on writing clean, efficient code and
+                        delivering smooth user experiences.
+                    </p>
+                    <h3 class="text-xl font-semibold mb-4 text-purple-500">
+                        Web & App Development Student at SMIT
+                    </h3>
+                    <p class="text-secondary mb-6">
+                        <strong>Skills:</strong> HTML5 | CSS | JavaScript | Bootstrap
+                    </p>
+                    <a href="./images/My Resume (11).pdf"><button
+                            class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-full glow-purple transition-all">
+                            <i class="fas fa-download mr-2"></i>Download Resume
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-theme">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-theme fade-up">Featured Projects</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-card rounded-lg overflow-hidden glow-purple fade-up">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                         <img src="./images/skillspark.jpeg" alt="skillspark-project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-theme">SkillSpark – Educational Website</h3>
+                        <p class="text-secondary mb-4">A fully responsive educational website built for a class project, showcasing teamwork and frontend development skills.</p>
+                        <p class="text-sm text-purple-500 mb-4">HTML, CSS, Bootstrap</p>
+                        <div class="space-x-2">
+                            <a href="https://brilliant-vacherin-709df7.netlify.app/">
+                            <button
+                                class="bg-purple-500 text-white px-4 py-2 rounded text-sm hover:bg-purple-600 transition-colors">Live
+                                Demo</button></a>
+                                <a href="https://github.com/huma515/skillspark-project">
+                            <button
+                                class="border border-purple-500 text-purple-500 px-4 py-2 rounded text-sm hover:bg-purple-500 hover:text-white transition-colors">Code
+                                Link</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card rounded-lg overflow-hidden glow-purple fade-up">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-center">
+                        <img src="./images/pg.jpeg" alt="password generatore" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-theme">SecurePass – Password Generator</h3>
+                        <p class="text-secondary mb-4">A simple password generator with customizable length, symbols, numbers, and a one-click copy feature for secure password creation.</p>
+                        <p class="text-sm text-purple-500 mb-4">HTML, CSS, JavaScript</p>
+                        <div class="space-x-2">
+                            <a href="https://rad-faun-3ecdf7.netlify.app/">
+                            <button
+                                class="bg-purple-500 text-white px-4 py-2 rounded text-sm hover:bg-purple-600 transition-colors">Live
+                                Demo</button></a>
+                                <a href="https://github.com/huma515/Password-Generator/tree/main">
+                            <button
+                                class="border border-purple-500 text-purple-500 px-4 py-2 rounded text-sm hover:bg-purple-500 hover:text-white transition-colors">Code
+                                Link</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card rounded-lg overflow-hidden glow-purple fade-up" >
+                    <div class="h-48 bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center">
+                     <img src="./images/foodix.jpeg" alt="foodix" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-theme">Foodix – Food Ordering Website</h3>
+                        <p class="text-secondary mb-4">A modern, responsive food ordering website with clean UI, smooth navigation, and appealing food presentation.</p>
+                        <p class="text-sm text-purple-500 mb-4">HTML, CSS, Bootstrap</p>
+                        <div class="space-x-2"> 
+                            <a href="https://incredible-heliotrope-734dae.netlify.app/">
+                            <button
+                                class="bg-purple-500 text-white px-4 py-2 rounded text-sm hover:bg-purple-600 transition-colors">Live
+                                Demo</button></a>
+                                <a href="https://github.com/huma515/Responsive-design-Using-bootstrap">
+                            <button
+                                class="border border-purple-500 text-purple-500 px-4 py-2 rounded text-sm hover:bg-purple-500 hover:text-white transition-colors">Code
+                                Link</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                                            <!-- with js projects -->
+        <div class="container mx-auto px-6  mt-16" >
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-card rounded-lg overflow-hidden glow-purple fade-up">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                        <img src="./images/chatbot.jpeg" alt="chatbot" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-theme">ChatEase — Simple Chatbot</h3>
+                        <p class="text-secondary mb-4"> A responsive chatbot built with HTML, CSS, and JavaScript for basic automated replies.</p>
+                        <p class="text-sm text-purple-500 mb-4">HTML, CSS, JavaScript, Bootstrap</p>
+                        <div class="space-x-2">
+                            <a href="https://silly-semolina-8d8891.netlify.app/">
+                            <button
+                                class="bg-purple-500 text-white px-4 py-2 rounded text-sm hover:bg-purple-600 transition-colors">Live
+                                Demo</button></a>
+                                <a href="https://github.com/huma515/simple-js-chatbot">
+                            <button
+                                class="border border-purple-500 text-purple-500 px-4 py-2 rounded text-sm hover:bg-purple-500 hover:text-white transition-colors">Code
+                                Link</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card rounded-lg overflow-hidden glow-purple fade-up">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-center">
+                        <img src="./images/to do.jpeg" alt="to do list" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-theme">TaskMate — To-Do List App</h3>
+                        <p class="text-secondary mb-4"> A simple and responsive to-do list app built with HTML, CSS, and JavaScript to add, edit, and delete daily tasks easily.</p>
+                        <p class="text-sm text-purple-500 mb-4">HTML, CSS, JavaScript, Bootstrap</p>
+                        <div class="space-x-2">
+                            <a href="https://whimsical-puffpuff-3a3f3c.netlify.app/">
+                            <button
+                                class="bg-purple-500 text-white px-4 py-2 rounded text-sm hover:bg-purple-600 transition-colors">Live
+                                Demo</button></a>
+                                <a href="https://github.com/huma515/To-Do-Application">
+                            <button
+                                class="border border-purple-500 text-purple-500 px-4 py-2 rounded text-sm hover:bg-purple-500 hover:text-white transition-colors">Code
+                                Link</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card rounded-lg overflow-hidden glow-purple fade-up">
+                    <div class="h-48 bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center">
+                        <i class="fas fa-calculator text-4xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-theme">Calculator App</h3>
+                        <p class="text-secondary mb-4">Interactive calculator with modern UI design</p>
+                        <p class="text-sm text-purple-500 mb-4">HTML, CSS, JavaScript</p>
+                        <div class="space-x-2">
+                            <button
+                                class="bg-purple-500 text-white px-4 py-2 rounded text-sm hover:bg-purple-600 transition-colors">Live
+                                Demo</button>
+                            <button
+                                class="border border-purple-500 text-purple-500 px-4 py-2 rounded text-sm hover:bg-purple-500 hover:text-white transition-colors">Code
+                                Link</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-10 text-center mt-16">
+            <a href="https://github.com/" target="_blank"
+                class="inline-block bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-full glow-purple transition-all">
+                View More Projects on GitHub →
+            </a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-card">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-theme fade-up">My Skills</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-theme rounded-lg p-6 glow-purple fade-in">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-code text-4xl text-purple-500 mb-4"></i>
+                        <h3 class="text-xl font-bold text-theme">Frontend</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-secondary">HTML5</span>
+                                <span class="text-secondary">95%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="progress-bar bg-purple-500 h-2 rounded-full" style="--progress-width: 90%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-secondary">CSS3</span>
+                                <span class="text-secondary">90%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="progress-bar bg-purple-500 h-2 rounded-full" style="--progress-width: 85%">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-secondary">JavaScript</span>
+                                <span class="text-secondary">85%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="progress-bar bg-purple-500 h-2 rounded-full" style="--progress-width: 75%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-theme rounded-lg p-6 glow-purple fade-in">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-tools text-4xl text-purple-500 mb-4"></i>
+                        <h3 class="text-xl font-bold text-theme">Tools</h3>
+                    </div>
+                    <div class="space-y-3 text-center">
+                        <div class="bg-purple-500 text-white px-3 py-2 rounded-full text-sm">VS Code</div>
+                        <div class="bg-purple-500 text-white px-3 py-2 rounded-full text-sm">Git & GitHub</div>
+                        <div class="bg-purple-500 text-white px-3 py-2 rounded-full text-sm">Chrome DevTools</div>
+                        <div class="bg-purple-500 text-white px-3 py-2 rounded-full text-sm">Netlify & Vercel</div>
+                    </div>
+                </div>
+
+                <div class="bg-theme rounded-lg p-6 glow-purple fade-in">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-heart text-4xl text-purple-500 mb-4"></i>
+                        <h3 class="text-xl font-bold text-theme">Soft Skills</h3>
+                    </div>
+                    <div class="space-y-3 text-center">
+                        <div class="bg-purple-500 text-white px-3 py-2 rounded-full text-sm">Creativity</div>
+                        <div class="bg-purple-500 text-white px-3 py-2 rounded-full text-sm">Teamwork</div>
+                        <div class="bg-purple-500 text-white px-3 py-2 rounded-full text-sm">Communication</div>
+                        <div class="bg-purple-500 text-white px-3 py-2 rounded-full text-sm">Problem Solving</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-theme">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-theme fade-in">Education Journey</h2>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="timeline-item bg-card rounded-lg p-6 mb-8 glow-purple fade-in">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-purple-500 p-3 rounded-full">
+                            <i class="fas fa-graduation-cap text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-theme">Web & App Development</h3>
+                            <p class="text-purple-500 font-semibold">Saylani Mass IT Training (SMIT)</p>
+                            <p class="text-secondary">Feb-2025</p>
+                            <p class="text-secondary mt-2">Developed a solid understanding of modern web technologies
+                                with hands-on experience in building responsive and user-friendly applications.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item bg-card rounded-lg p-6 mb-8 glow-purple fade-in">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-purple-500 p-3 rounded-full">
+                            <i class="fas fa-school text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-theme">Intermediate</h3>
+                            <p class="text-purple-500 font-semibold">Khatoon-e-Pakistan Govt. College for Women</p>
+                            <p class="text-secondary">Completed</p>
+                            <p class="text-secondary mt-2">Built a strong academic foundation while enhancing analytical
+                                and problem-solving skills.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item bg-card rounded-lg p-6 glow-purple fade-in">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-purple-500 p-3 rounded-full">
+                            <i class="fas fa-book text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-theme">Matriculation</h3>
+                            <p class="text-purple-500 font-semibold">Bilquis Edhi Secondary Girls School</p>
+                            <p class="text-secondary">Completed</p>
+                            <p class="text-secondary mt-2">Established a solid academic base with a focus on discipline,
+                                consistency, and learning excellence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-card">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-theme fade-in">What People Say</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-theme rounded-lg p-6 glow-purple fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-theme">Hera Iqram</h4>
+                            <p class="text-secondary text-sm">Instructor, SMIT</p>
+                        </div>
+                    </div>
+                    <p class="text-secondary italic">"Huma is a dedicated student with a strong sense of creativity and
+                        discipline. Her projects always reflect a clear understanding of design and functionality."</p>
+                </div>
+
+                <div class="bg-theme rounded-lg p-6 glow-purple fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-theme">Sana Akhter</h4>
+                            <p class="text-secondary text-sm">Classmate</p>
+                        </div>
+                    </div>
+                    <p class="text-secondary italic">"A wonderful classmate with great teamwork skills — always
+                        positive, creative, and ready to help others grow."</p>
+                </div>
+
+                <div class="bg-theme rounded-lg p-6 glow-purple fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-theme">Kashaf Saeed</h4>
+                            <p class="text-secondary text-sm">Project Partner</p>
+                        </div>
+                    </div>
+                    <p class="text-secondary italic">""A great teammate! Her design sense and problem-solving skills
+                        made our collaboration smooth and successful."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-theme relative overflow-hidden">
+        <div class="particles" id="contactParticles"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-4xl font-bold text-center mb-12 text-theme fade-in">Let's Connect</h2>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-6 text-theme">Get In Touch</h3>
+                    <p class="text-secondary mb-8">
+                        I'm always open to discussing new opportunities and interesting projects. Let's create something
+                        amazing together!
+                    </p>
+
+                    <div class="space-y-4">
+                        <a href="https://www.linkedin.com/in/huma-qureshi-47a92635b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            class="flex items-center space-x-3 text-secondary hover:text-purple-500 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://github.com/"
+                            class="flex items-center space-x-3 text-secondary hover:text-purple-500 transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                            <span>GitHub Profile</span>
+                        </a>
+                        <a href="https://www.instagram.com/huma_hashim6156?igsh=MXFqZ2M0YWVidHU3Yg=="
+                            class="flex items-center space-x-3 text-secondary hover:text-purple-500 transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <form class="space-y-6" id="contactForm">
+                        <div>
+                            <input type="text" placeholder="Your Name" required
+                                class="w-full p-3 bg-card border border-theme rounded-lg text-theme focus:border-purple-500 focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Your Email" required
+                                class="w-full p-3 bg-card border border-theme rounded-lg text-theme focus:border-purple-500 focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <textarea placeholder="Your Message" rows="5" required
+                                class="w-full p-3 bg-card border border-theme rounded-lg text-theme focus:border-purple-500 focus:outline-none transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 rounded-lg glow-purple transition-all">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-card border-t border-theme">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-secondary mb-4 md:mb-0">
+                    © 2025 Huma Hashim | All Rights Reserved.
+                </p>
+
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/huma-qureshi-47a92635b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        class="text-secondary hover:text-purple-500 transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/" class="text-secondary hover:text-purple-500 transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/huma_hashim6156?igsh=MXFqZ2M0YWVidHU3Yg=="
+                        class="text-secondary hover:text-purple-500 transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop"
+        class="fixed bottom-6 right-6 bg-purple-500 text-white p-3 rounded-full glow-purple opacity-0 transition-all duration-300 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark')) {
+                body.classList.remove('dark');
+                body.classList.add('light');
+                themeIcon.className = 'fas fa-sun';
+            } else {
+                body.classList.remove('light');
+                body.classList.add('dark');
+                themeIcon.className = 'fas fa-moon';
+            }
+        });
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+
+                    // Animate progress bars
+                    const progressBars = entry.target.querySelectorAll('.progress-bar');
+                    progressBars.forEach(bar => {
+                        setTimeout(() => {
+                            bar.classList.add('animate');
+                        }, 500);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Particles Animation
+        function createParticles(containerId, count = 20) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            for (let i = 0; i < count; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        createParticles('particles', 15);
+        createParticles('contactParticles', 10);
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.transform = 'translateY(0)';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.transform = 'translateY(10px)';
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Show success message
+            const button = e.target.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check mr-2"></i>Message Sent!';
+            button.style.backgroundColor = '#10b981';
+
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.style.backgroundColor = '';
+                e.target.reset();
+            }, 3000);
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Wave animation for emoji
+        const wave = document.querySelector('.wave');
+        if (wave) {
+            setInterval(() => {
+                wave.style.transform = 'rotate(20deg)';
+                setTimeout(() => {
+                    wave.style.transform = 'rotate(-10deg)';
+                    setTimeout(() => {
+                        wave.style.transform = 'rotate(0deg)';
+                    }, 150);
+                }, 150);
+            }, 3000);
+        }
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'989e59df91459083',t:'MTc1OTY4MjMyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
