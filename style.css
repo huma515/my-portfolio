@@ -107,14 +107,14 @@
         }
 
         /* Progress Bars */
-        .progress-bar {
+        /* .progress-bar {
             width: 0%;
             transition: width 2s ease;
         }
 
         .progress-bar.animate {
             width: var(--progress-width);
-        }
+        } */
 
         /* Timeline */
         .timeline-item {
@@ -197,3 +197,5 @@
         .light .header-transparent {
             background: rgba(255, 255, 255, 0.9);
         }
+
+        
